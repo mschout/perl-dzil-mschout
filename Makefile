@@ -15,3 +15,8 @@ all:
 		echo building perl-dzil-mschout:$$version ; \
 		cd $$version && docker build -t perl-dzil-mschout:$$version . ; \
 	done
+
+pull:
+	@for version in $(VERSIONS); do \
+		docker pull perl-dzil-mschout:$$version ; \
+	done
