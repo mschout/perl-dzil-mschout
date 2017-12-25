@@ -1,6 +1,6 @@
 FROM perl:5.24
 
-RUN cpanm Dist::Zilla \
+RUN cpanm -q --notest Dist::Zilla \
     Dist::Zilla::PluginBundle::MSCHOUT \
     Test::Pod \
     Test::Pod::Coverage \
